@@ -20,7 +20,7 @@ body {
 }
 
 nav {
-  max-width: 1150px;
+  max-width: 1180px;
   margin: auto;
   padding: 18px 25px;
   display: flex;
@@ -30,13 +30,13 @@ nav {
 
 .logo {
   font-size: 1.1rem;
-  color: #e5e7eb;
+  color: #ffffff;
 }
 
 .nav-links a {
   color: #cbd5e1;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 18px;
   font-size: 0.95rem;
 }
 
@@ -47,8 +47,8 @@ nav {
 .hero {
   min-height: 85vh;
   background:
-    linear-gradient(rgba(4, 10, 20, 0.82), rgba(4, 10, 20, 0.92)),
-    url("https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&w=1600&q=80");
+    linear-gradient(rgba(4, 10, 20, 0.72), rgba(4, 10, 20, 0.92)),
+    url("https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1600&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -56,9 +56,9 @@ nav {
 }
 
 .hero-overlay {
-  max-width: 1150px;
+  max-width: 1180px;
   margin: auto;
-  padding: 60px 25px;
+  padding: 70px 25px;
 }
 
 .museum-label,
@@ -72,124 +72,274 @@ nav {
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 4.2rem;
   max-width: 850px;
-  line-height: 1.1;
+  line-height: 1.05;
   margin-bottom: 25px;
 }
 
 .hero-text {
-  max-width: 700px;
+  max-width: 720px;
   color: #d1d5db;
   font-size: 1.15rem;
   margin-bottom: 35px;
 }
 
-.button {
+.button,
+.secondary-btn {
   display: inline-block;
-  background: #38bdf8;
-  color: #06111f;
   padding: 14px 24px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
 }
 
+.button {
+  background: #38bdf8;
+  color: #06111f;
+}
+
+.secondary-btn {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
 main {
-  max-width: 1150px;
+  max-width: 1180px;
   margin: auto;
   padding: 80px 25px;
 }
 
-.intro,
-.framework,
-.curator-note {
-  margin-bottom: 90px;
+.museum-intro,
+.exhibit-section,
+.artifact-section,
+.framework-section,
+.curator-section {
+  margin-bottom: 100px;
+}
+
+.museum-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 45px;
+  align-items: start;
+}
+
+h1,
+h2,
+h3 {
+  color: #ffffff;
 }
 
 h2 {
-  font-size: 2.3rem;
-  margin-bottom: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 22px;
 }
 
-.intro p,
-.framework p,
-.curator-note p {
+p {
   color: #cbd5e1;
-  max-width: 850px;
+  margin-bottom: 18px;
 }
 
-.exhibit-grid {
+.intro-left p {
+  max-width: 680px;
+}
+
+.timeline-box {
+  background: #111827;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.timeline-title {
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.timeline-item {
+  border-left: 2px solid #38bdf8;
+  padding-left: 20px;
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.timeline-item h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.timeline-item p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.circle {
+  width: 13px;
+  height: 13px;
+  background: #38bdf8;
+  border-radius: 50%;
+  position: absolute;
+  left: -7px;
+  top: 6px;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-heading {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 40px;
+}
+
+.exhibit-grid,
+.artifact-grid,
+.framework-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  margin-bottom: 90px;
 }
 
-.exhibit-card {
+.museum-card,
+.artifact-card,
+.framework-card {
   background: #111827;
   border: 1px solid rgba(255,255,255,0.12);
-  padding: 30px;
-  border-radius: 12px;
-  transition: 0.3s;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
-.exhibit-card:hover {
-  transform: translateY(-6px);
-  border-color: #38bdf8;
+.museum-card img,
+.artifact-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
 }
 
-.exhibit-card span {
+.card-content,
+.artifact-card,
+.framework-card {
+  padding: 26px;
+}
+
+.card-content span {
   color: #38bdf8;
   font-size: 0.85rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.exhibit-card h3 {
-  margin: 15px 0;
-  font-size: 1.4rem;
+.card-content h3,
+.artifact-card h3,
+.framework-card h3 {
+  margin: 12px 0;
+  font-size: 1.35rem;
 }
 
-.exhibit-card p {
-  color: #cbd5e1;
-  margin-bottom: 20px;
-}
-
-.exhibit-card a {
+.card-content a {
   color: #38bdf8;
   text-decoration: none;
   font-weight: bold;
 }
 
-.framework-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 30px;
+.framework-card {
+  border-left: 4px solid #38bdf8;
 }
 
-.framework-grid div {
+.curator-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 35px;
+  align-items: center;
   background: #111827;
-  padding: 25px;
-  border-left: 4px solid #38bdf8;
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.curator-image img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.exhibit-page {
+  max-width: 1180px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+.exhibit-page h1 {
+  font-size: 3.3rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.wide-image {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 25px 0 35px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.exhibit-intro {
+  font-size: 1.08rem;
+  color: #cbd5e1;
+  max-width: 930px;
+  margin-bottom: 24px;
+}
+
+.exhibit-page h2 {
+  margin-top: 55px;
 }
 
 .curator-note {
   background: #111827;
   border-left: 5px solid #38bdf8;
   padding: 35px;
-  border-radius: 10px;
+  border-radius: 14px;
+  margin-top: 70px;
+}
+
+.page-buttons {
+  margin-top: 55px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
 footer {
-  text-align: center;
-  padding: 35px;
-  color: #94a3b8;
+  background: #08111f;
   border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 45px 25px;
 }
 
-@media (max-width: 850px) {
+.footer-content {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 30px;
+}
+
+footer h3,
+footer h4 {
+  margin-bottom: 12px;
+}
+
+footer p {
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
   nav {
     flex-direction: column;
     gap: 15px;
@@ -208,8 +358,20 @@ footer {
     font-size: 2.7rem;
   }
 
+  .museum-intro,
+  .curator-section,
+  .footer-content,
   .exhibit-grid,
+  .artifact-grid,
   .framework-grid {
     grid-template-columns: 1fr;
+  }
+
+  .wide-image {
+    height: 280px;
+  }
+
+  .exhibit-page h1 {
+    font-size: 2.4rem;
   }
 }
