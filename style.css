@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b111c;
+  color: #f4f4f4;
+  line-height: 1.7;
+}
+
+.site-header {
+  background: #08111f;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1150px;
+  margin: auto;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.hero {
+  min-height: 85vh;
+  background:
+    linear-gradient(rgba(4, 10, 20, 0.82), rgba(4, 10, 20, 0.92)),
+    url("https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  max-width: 1150px;
+  margin: auto;
+  padding: 60px 25px;
+}
+
+.museum-label,
+.section-tag {
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  max-width: 850px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero-text {
+  max-width: 700px;
+  color: #d1d5db;
+  font-size: 1.15rem;
+  margin-bottom: 35px;
+}
+
+.button {
+  display: inline-block;
+  background: #38bdf8;
+  color: #06111f;
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 80px 25px;
+}
+
+.intro,
+.framework,
+.curator-note {
+  margin-bottom: 90px;
+}
+
+h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.intro p,
+.framework p,
+.curator-note p {
+  color: #cbd5e1;
+  max-width: 850px;
+}
+
+.exhibit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 90px;
+}
+
+.exhibit-card {
+  background: #111827;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.exhibit-card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+}
+
+.exhibit-card span {
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.exhibit-card h3 {
+  margin: 15px 0;
+  font-size: 1.4rem;
+}
+
+.exhibit-card p {
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.exhibit-card a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.framework-grid div {
+  background: #111827;
+  padding: 25px;
+  border-left: 4px solid #38bdf8;
+}
+
+.curator-note {
+  background: #111827;
+  border-left: 5px solid #38bdf8;
+  padding: 35px;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+@media (max-width: 850px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    margin: 6px;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .exhibit-grid,
+  .framework-grid {
+    grid-template-columns: 1fr;
+  }
+}
